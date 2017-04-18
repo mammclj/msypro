@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beansProjectDescription>
+	<version>1</version>
+	<pluginVersion><![CDATA[3.8.3.201612191259-RELEASE]]></pluginVersion>
+	<configSuffixes>
+		<configSuffix><![CDATA[xml]]></configSuffix>
+	</configSuffixes>
+	<enableImports><![CDATA[false]]></enableImports>
+	<configs>
+		<config>src/main/resources/spring-datasources.xml</config>
+		<config>src/main/resources/spring-mybatis.xml</config>
+		<config>src/main/resources/spring-mybatis-mapper-master.xml</config>
+		<config>src/main/resources/spring-transaction.xml</config>
+		<config>src/main/resources/spring-mybatis-mapper-slave.xml</config>
+		<config>src/main/resources/spring.xml</config>
+		<config>src/main/resources/spring-mvc.xml</config>
+	</configs>
+	<autoconfigs>
+	</autoconfigs>
+	<configSets>
+	</configSets>
+</beansProjectDescription>

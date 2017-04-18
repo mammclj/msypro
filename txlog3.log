@@ -1,0 +1,1 @@
+{"id":"com.atomikos.spring.jdbc.tm149249659032100001","wasCommitted":false,"participants":[{"uri":"com.atomikos.spring.jdbc.tm1","state":"TERMINATED","expires":1492496890530,"resourceName":"masterDB"},{"uri":"com.atomikos.spring.jdbc.tm2","state":"TERMINATED","expires":1492496890530,"resourceName":"slaveDB"}]}

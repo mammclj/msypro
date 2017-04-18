@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc 
+	http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+	http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.0.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" default-lazy-init="true">
+	<description>配置主-从数据源信息</description>
+	<!-- com.atomikos.jdbc.nonxa.AtomikosNonXADataSourceBean -->
+ 	<bean id="abstractXADataSource" class="com.atomikos.jdbc.AtomikosDataSourceBean" init-method="init" destroy-method="close" abstract="true">  
+       <property name="xaDataSourceClassName" value="${jdbc.xaDataSourceClassName}"/>  
+       <property name="poolSize" value="${jdbc.poolSize}" />  
+       <property name="minPoolSize" value="${jdbc.minPoolSize}"/>  
+       <property name="maxPoolSize" value="${jdbc.maxPoolSize}"/>  
+       <property name="borrowConnectionTimeout" value="${jdbc.borrowConnectionTimeout}"/>  
+       <property name="reapTimeout" value="${jdbc.reapTimeout}"/>  
+       <property name="maxIdleTime" value="${jdbc.maxIdleTime}"/>  
+       <property name="maintenanceInterval" value="${jdbc.maintenanceInterval}"/>  
+       <property name="loginTimeout" value="${jdbc.loginTimeout}"/>  
+       <property name="testQuery" value="${validationQuery}"/>  
+   	</bean>  
+ 	<bean id="masterDataSource" parent="abstractXADataSource">  
+ 		<property name="uniqueResourceName" value="${master.jdbc.uniqueResourceName}" />  
+	    <property name="xaProperties">
+            <props>
+           		<prop key="driverClassName">${jdbc.driverClassName}</prop>
+                <prop key="url">${master.jdbc.url}</prop>
+                <prop key="password">${jdbc.password}</prop>
+                 <!--  <prop key="user">${jdbc.username}</prop> --> <!-- mysql -->
+                <prop key="username">${jdbc.username}</prop>   <!-- durid -->
+             	<prop key="initialSize">${jdbc.initialSize}</prop>
+				<prop key="maxActive">${jdbc.maxActive}</prop> <!-- 若不配置则代码执行"{dataSource-1} inited"此处停止  -->
+				<prop key="minIdle">${jdbc.minIdle}</prop>
+				<prop key="maxWait">${jdbc.maxWait}</prop>
+           		<prop key="validationQuery">${validationQuery}</prop>
+				<prop key="testOnBorrow">${jdbc.testOnBorrow}</prop>
+				<prop key="testOnReturn">${jdbc.testOnReturn}</prop>
+				<prop key="testWhileIdle">${jdbc.testWhileIdle}</prop>
+				<prop key="removeAbandoned">${jdbc.removeAbandoned}</prop>
+				<prop key="removeAbandonedTimeout">${jdbc.removeAbandonedTimeout}</prop>
+				<prop key="logAbandoned">${jdbc.logAbandoned}</prop>
+				<prop key="filters">${jdbc.filters}</prop>
+            </props>
+        </property>
+    </bean>  
+   	<bean id="slaveDataSource" parent="abstractXADataSource">  
+   		<property name="uniqueResourceName" value="${slave.jdbc.uniqueResourceName}" />  
+	    <property name="xaProperties">
+            <props>
+          		<prop key="driverClassName">${jdbc.driverClassName}</prop>
+                <prop key="url">${slave.jdbc.url}</prop>
+                <prop key="password">${jdbc.password}</prop>
+                <!--  <prop key="user">${jdbc.username}</prop> -->
+                <prop key="username">${jdbc.username}</prop>
+               	<prop key="initialSize">${jdbc.initialSize}</prop>
+				<prop key="maxActive">${jdbc.maxActive}</prop> <!-- 若不配置则代码执行"{dataSource-1} inited"此处停止  -->
+				<prop key="minIdle">${jdbc.minIdle}</prop>
+				<prop key="maxWait">${jdbc.maxWait}</prop>
+           		<prop key="validationQuery">${validationQuery}</prop>
+				<prop key="testOnBorrow">${jdbc.testOnBorrow}</prop>
+				<prop key="testOnReturn">${jdbc.testOnReturn}</prop>
+				<prop key="testWhileIdle">${jdbc.testWhileIdle}</prop>
+				<prop key="removeAbandoned">${jdbc.removeAbandoned}</prop>
+				<prop key="removeAbandonedTimeout">${jdbc.removeAbandonedTimeout}</prop>
+				<prop key="logAbandoned">${jdbc.logAbandoned}</prop>
+				<prop key="filters">${jdbc.filters}</prop>
+            </props>
+        </property>
+    </bean>  
+</beans>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.msymobile.www.commons.dao.master.RegionMapper" >
+  <resultMap id="BaseResultMap" type="com.msymobile.www.commons.model.master.Region" >
+    <id column="region_id" property="regionId" jdbcType="CHAR" />
+    <result column="region" property="region" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    region_id, region
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from region
+    where region_id = #{regionId,jdbcType=CHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
+    delete from region
+    where region_id = #{regionId,jdbcType=CHAR}
+  </delete>
+  <insert id="insert" parameterType="com.msymobile.www.commons.model.master.Region" >
+    insert into region (region_id, region)
+    values (#{regionId,jdbcType=CHAR}, #{region,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.msymobile.www.commons.model.master.Region" >
+    insert into region
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="regionId != null" >
+        region_id,
+      </if>
+      <if test="region != null" >
+        region,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="regionId != null" >
+        #{regionId,jdbcType=CHAR},
+      </if>
+      <if test="region != null" >
+        #{region,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.msymobile.www.commons.model.master.Region" >
+    update region
+    <set >
+      <if test="region != null" >
+        region = #{region,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where region_id = #{regionId,jdbcType=CHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.msymobile.www.commons.model.master.Region" >
+    update region
+    set region = #{region,jdbcType=VARCHAR}
+    where region_id = #{regionId,jdbcType=CHAR}
+  </update>
+</mapper>
