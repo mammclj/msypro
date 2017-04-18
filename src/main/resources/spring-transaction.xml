@@ -33,7 +33,7 @@
     </bean>
 
     <aop:config  proxy-target-class="true">
-        <aop:advisor pointcut="(execution(* com.msymobile.www.commons.service.*.*(..)))" advice-ref="txAdvice" />
+        <aop:advisor pointcut="(execution(* com.msymobile.www.*.service.*.*(..)))" advice-ref="txAdvice" />
     </aop:config>
  
     <tx:advice id="txAdvice" transaction-manager="springTransactionManager">

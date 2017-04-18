@@ -47,7 +47,7 @@ public class TestSpring {
 				TaoBaoArea taoBaoArea = taoBaoAreaData.getTaoBaoArea();
 				if(taoBaoArea!=null){
 					taoBaoArea.setId(UUID.randomUUID().toString().replaceAll("-", ""));
-					if(this.taoBaoAreaService.registerTaoBaoArea(taoBaoArea)==1){
+					if(this.taoBaoAreaService.insertTaoBaoArea(taoBaoArea)==1){
 						map.put("regionId", taoBaoArea.getRegionId());
 						map.put("cityId", taoBaoArea.getCityId());
 						message = "查询成功！";

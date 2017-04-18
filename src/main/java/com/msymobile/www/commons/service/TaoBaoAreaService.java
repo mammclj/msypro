@@ -5,7 +5,7 @@ import com.msymobile.www.commons.model.master.TaoBaoArea;
 
 public interface TaoBaoAreaService {
 
-	int registerTaoBaoArea(TaoBaoArea taoBaoArea);
+	int insertTaoBaoArea(TaoBaoArea taoBaoArea);
 
 	IP selectByPrimaryKey(String ip);
 

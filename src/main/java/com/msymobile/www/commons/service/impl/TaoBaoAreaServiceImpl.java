@@ -43,7 +43,7 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 	private SPMapper spMapper;
 	
 	@Override
-	public int registerTaoBaoArea(TaoBaoArea taoBaoArea) {
+	public int insertTaoBaoArea(TaoBaoArea taoBaoArea) {
 		if(this.taoBaoAreaMapper.insert(taoBaoArea)!=1){
 			throw new RuntimeException("master insert -------------失败");
 		}
