@@ -34,8 +34,7 @@ public class TaoBaoAreaController {
 	public String showAreaInfoByIp(HttpServletRequest request,HttpServletResponse response){
 		response.setContentType("text/html;charset=UTF-8");
 		PrintWriter out = null;
-		Json json = new Json(true,"",null);
-		boolean success = true;
+		boolean success = false;
 		Map<String,Object> map = new HashMap<String,Object>();
 		String regionId = "";
 		String cityId = "";
@@ -51,9 +50,10 @@ public class TaoBaoAreaController {
 			
 			//先查看redis中有没有数据
 			String values = RedisUtil.getJedis().get(ip);
-			if(values != null){
-				regionId = values.split(";")[0];
-				cityId = values.split(";")[1];
+			if(values != null && !"".equals(values.trim())){
+				String[] data = values.trim().split(";");
+				regionId = data[0];
+				cityId = data[1];
 				message = "查询成功！";
 			}else{
 				//查看数据库中是否有此ip
@@ -86,17 +86,14 @@ public class TaoBaoAreaController {
 					}
 				}
 			}
+			success = true;
 		} catch (Exception e) {
-			success = false;
 			e.printStackTrace();
 		}finally{
 			if(out !=null){
 				map.put("regionId", regionId);
 				map.put("cityId", cityId);
-				json.setSuccess(success);
-				json.setObj(map);
-				json.setMessage(message);
-				out.print(JSON.toJSONString(json));
+				out.print(JSON.toJSONString(new Json(success,message,map)));
 				out.close();
 			}
 		}

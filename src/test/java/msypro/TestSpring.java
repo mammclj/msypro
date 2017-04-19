@@ -32,7 +32,6 @@ public class TestSpring {
 	
 	@Test
 	public void TestInsert(){
-		Json json = new Json(true,"",null);
 		boolean success = true;
 		Map<String,Object> map = new HashMap<String,Object>();
 		String message = "查询失败！";
@@ -55,6 +54,6 @@ public class TestSpring {
 				}
 			}
 		}
-		logger.info(JSON.toJSONString(json));
+		logger.info(JSON.toJSONString(new Json(success,message,map)));
 	}
 }
