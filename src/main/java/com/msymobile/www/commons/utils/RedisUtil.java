@@ -1,5 +1,9 @@
 package com.msymobile.www.commons.utils;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
+
 import org.apache.log4j.Logger;
 
 import com.alibaba.fastjson.JSONObject;
@@ -14,20 +18,35 @@ import redis.clients.jedis.JedisPoolConfig;
  */
 @SuppressWarnings("unused")
 public class RedisUtil {
-	private static final String IP = "127.0.0.1"; // ip
-	private static final int PORT = 6379; // 端口
-	private static final String AUTH = ""; // 密码(原始默认是没有密码)
-	private static int MAX_ACTIVE = 1024; // 最大连接数
-	private static int MAX_IDLE = 200; // 设置最大空闲数
-	private static int MAX_WAIT = 10000; // 最大连接时间
-	private static int TIMEOUT = 10000; // 超时时间
-	private static boolean BORROW = true; // 在borrow一个事例时是否提前进行validate操作
+	private static String IP; // ip
+	private static int PORT; // 端口
+	private static String AUTH; // 密码(原始默认是没有密码)
+	private static int MAX_ACTIVE; // 最大连接数
+	private static int MAX_IDLE; // 设置最大空闲数
+	private static int MAX_WAIT; // 最大连接时间
+	private static int TIMEOUT; // 超时时间
+	private static boolean BORROW; // 在borrow一个事例时是否提前进行validate操作
 	private static JedisPool pool = null;
 	private static Logger logger = Logger.getLogger(RedisUtil.class);
 	/**
 	 * 初始化线程池
 	 */
 	static {
+		InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("/redis.properties");
+		Properties pro = new Properties();
+		try {
+			pro.load(in);
+			IP = pro.getProperty("redis.ip");
+			PORT = Integer.parseInt(pro.getProperty("redis.port"));
+			AUTH = pro.getProperty("redis.auth");
+			MAX_IDLE = Integer.parseInt(pro.getProperty("redis.maxIdle"));
+			MAX_ACTIVE = Integer.parseInt(pro.getProperty("redis.maxActive"));
+			MAX_WAIT = Integer.parseInt(pro.getProperty("redis.maxWait"));
+			TIMEOUT = Integer.parseInt(pro.getProperty("redis.timeOut"));
+			BORROW = Boolean.parseBoolean(pro.getProperty("redis.testOnBorrow"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		JedisPoolConfig config = new JedisPoolConfig();
 		config.setMaxTotal(MAX_ACTIVE);
 		config.setMaxIdle(MAX_IDLE);
