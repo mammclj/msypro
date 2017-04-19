@@ -2,7 +2,7 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="TaoBaoAreaInfo"  type="com.msymobile.www.commons.model.slave.TaoBaoAreaInfo"/>
+        <!-- <typeAlias alias="TaoBaoAreaInfo"  type="com.msymobile.www.commons.model.slave.TaoBaoAreaInfo"/> -->
     </typeAliases>
     <mappers>
         <mapper resource="com/msymobile/www/commons/mapper/slave/TaoBaoAreaInfoMapper.xml" />

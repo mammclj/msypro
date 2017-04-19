@@ -32,7 +32,7 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 	private TaoBaoAreaInfoMapper taoBaoAreaInfoMapper;
 	
 	@Autowired
-	private IPMapper ipMapper;
+	private IPMapper iPMapper;
 	@Autowired
 	private CountryMapper countryMapper;
 	@Autowired
@@ -40,7 +40,7 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 	@Autowired
 	private CityMapper cityMapper;
 	@Autowired
-	private SPMapper spMapper;
+	private SPMapper sPMapper;
 	
 	@Override
 	public int insertTaoBaoArea(TaoBaoArea taoBaoArea) {
@@ -59,7 +59,7 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 
 	@Override
 	public IP selectByPrimaryKey(String ip) {
-		return this.ipMapper.selectByPrimaryKey(ip);
+		return this.iPMapper.selectByPrimaryKey(ip);
 	}
 
 	@Override
@@ -88,16 +88,16 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 			result = this.cityMapper.insert(city);
 		}
 		
-		SP sp = this.spMapper.selectByPrimaryKey(ispId);
+		SP sp = this.sPMapper.selectByPrimaryKey(ispId);
 		if(sp==null){
 			sp = new SP(ispId,taoBaoArea.getIsp());
-			result = this.spMapper.insert(sp);
+			result = this.sPMapper.insert(sp);
 		}
 		
-		IP ipModel = this.ipMapper.selectByPrimaryKey(taoBaoArea.getIp());
+		IP ipModel = this.iPMapper.selectByPrimaryKey(taoBaoArea.getIp());
 		if(ipModel==null){
 			ipModel = new IP(ip,countryId,regionId,cityId,ispId);
-			result = this.ipMapper.insert(ipModel);
+			result = this.iPMapper.insert(ipModel);
 		}
 		return result;
 	}

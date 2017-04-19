@@ -17,8 +17,8 @@
 	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" default-lazy-init="true">
 	<description>MyBatis为不同的mapper注入sqlSessionFactory</description>
     <!-- Mapper的管理及注入 -->
-    <bean id="taoBaoAreaInfoMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="slaveSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.slave.TaoBaoAreaInfoMapper" />
-    </bean>
+    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="slaveSqlSessionFactory"/>
+		<property name="basePackage" value="com.msymobile.www.commons.dao.slave" />
+	</bean> 
 </beans>

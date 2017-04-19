@@ -17,28 +17,8 @@
 	http://www.springframework.org/schema/aop/spring-aop-4.0.xsd" default-lazy-init="true">
 	<description>MyBatis为不同的mapper注入sqlSessionFactory</description>
     <!-- Mapper的管理及注入 -->
-    <bean id="taoBaoAreaMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.TaoBaoAreaMapper" />
-    </bean>
-    <bean id="countryMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.CountryMapper" />
-    </bean>
-    <bean id="regionMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.RegionMapper" />
-    </bean>
-    <bean id="cityMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.CityMapper" />
-    </bean>
-    <bean id="spMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.SPMapper" />
-    </bean>
-    <bean id="ipMapper" class="org.mybatis.spring.mapper.MapperFactoryBean">
-        <property name="sqlSessionFactory" ref="masterSqlSessionFactory" />
-        <property name="mapperInterface" value="com.msymobile.www.commons.dao.master.IPMapper" />
-    </bean>
+	<bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
+		<property name="sqlSessionFactoryBeanName" value="masterSqlSessionFactory"/>
+		<property name="basePackage" value="com.msymobile.www.commons.dao.master" />
+	</bean> 
 </beans>

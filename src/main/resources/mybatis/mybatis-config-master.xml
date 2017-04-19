@@ -2,12 +2,12 @@
 <!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN" "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <typeAlias alias="TaoBaoArea"  type="com.msymobile.www.commons.model.master.TaoBaoArea"/>
+        <!-- <typeAlias alias="TaoBaoArea"  type="com.msymobile.www.commons.model.master.TaoBaoArea"/>
         <typeAlias alias="Country"  type="com.msymobile.www.commons.model.master.Country"/>
         <typeAlias alias="Region"  type="com.msymobile.www.commons.model.master.Region"/>
         <typeAlias alias="City"  type="com.msymobile.www.commons.model.master.City"/>
         <typeAlias alias="SP"  type="com.msymobile.www.commons.model.master.SP"/>
-        <typeAlias alias="IP"  type="com.msymobile.www.commons.model.master.IP"/>
+        <typeAlias alias="IP"  type="com.msymobile.www.commons.model.master.IP"/> -->
     </typeAliases>
     <mappers>
         <mapper resource="com/msymobile/www/commons/mapper/master/TaoBaoAreaMapper.xml" />
