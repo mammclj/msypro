@@ -42,7 +42,6 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 	@Autowired
 	private SPMapper sPMapper;
 	
-	@Override
 	public int insertTaoBaoArea(TaoBaoArea taoBaoArea) {
 		if(this.taoBaoAreaMapper.insert(taoBaoArea)!=1){
 			throw new RuntimeException("master insert -------------失败");
@@ -56,12 +55,10 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 		return 1;
 	}
 
-	@Override
 	public IP selectByPrimaryKey(String ip) {
 		return this.iPMapper.selectByPrimaryKey(ip);
 	}
 
-	@Override
 	public int insertTaoBaoAreaAndChildTable(TaoBaoArea taoBaoArea) {
 		this.taoBaoAreaMapper.insert(taoBaoArea);
 		int result = 0;
