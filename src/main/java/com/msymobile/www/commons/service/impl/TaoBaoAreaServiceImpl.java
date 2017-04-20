@@ -47,7 +47,6 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 		if(this.taoBaoAreaMapper.insert(taoBaoArea)!=1){
 			throw new RuntimeException("master insert -------------失败");
 		}
-		taoBaoArea.setId("2");
 		TaoBaoAreaInfo taoBaoAreaInfo = new TaoBaoAreaInfo();
 		BeanUtils.copyProperties(taoBaoArea, taoBaoAreaInfo);
 		if(this.taoBaoAreaInfoMapper.insert(taoBaoAreaInfo)!=1){
