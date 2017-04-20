@@ -253,5 +253,16 @@
 	</dependencies>
   <build>
     <finalName>msypro</finalName>
+    <defaultGoal>compile</defaultGoal>
+	<plugins>
+		<plugin>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-war-plugin</artifactId>
+			<version>2.0.2</version>
+			<configuration>
+				<warSourceExcludes>WEB-INF/lib/log4j-1.2.17.jar</warSourceExcludes>
+			</configuration>
+		</plugin>
+	</plugins>
   </build>
 </project>
