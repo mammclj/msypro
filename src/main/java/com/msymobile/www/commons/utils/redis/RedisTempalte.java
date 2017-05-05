@@ -149,6 +149,7 @@ public class RedisTempalte {
 
 	/**
 	 * @Description:String（字符串）获取
+	 * @param index redis库号
 	 * @param key
 	 * @return value
 	 * @version [版本号1.0.0]

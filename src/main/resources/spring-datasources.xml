@@ -25,7 +25,7 @@
        <property name="maxIdleTime" value="${jdbc.maxIdleTime}"/>  
        <property name="maintenanceInterval" value="${jdbc.maintenanceInterval}"/>  
        <property name="loginTimeout" value="${jdbc.loginTimeout}"/>  
-       <property name="testQuery" value="${validationQuery}"/>  
+       <property name="testQuery" value="${validationQuery}"/>
    	</bean>  
  	<bean id="masterDataSource" parent="abstractXADataSource">  
  		<property name="uniqueResourceName" value="${master.jdbc.uniqueResourceName}" />  
@@ -40,6 +40,10 @@
 				<prop key="maxActive">${jdbc.maxActive}</prop> <!-- 若不配置则代码执行"{dataSource-1} inited"此处停止  -->
 				<prop key="minIdle">${jdbc.minIdle}</prop>
 				<prop key="maxWait">${jdbc.maxWait}</prop>
+				<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+				<prop key="timeBetweenEvictionRunsMillis">${jdbc.timeBetweenEvictionRunsMillis}</prop>
+				<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+    			<prop key="minEvictableIdleTimeMillis">${jdbc.minEvictableIdleTimeMillis}</prop>
            		<prop key="validationQuery">${validationQuery}</prop>
 				<prop key="testOnBorrow">${jdbc.testOnBorrow}</prop>
 				<prop key="testOnReturn">${jdbc.testOnReturn}</prop>
@@ -64,6 +68,10 @@
 				<prop key="maxActive">${jdbc.maxActive}</prop> <!-- 若不配置则代码执行"{dataSource-1} inited"此处停止  -->
 				<prop key="minIdle">${jdbc.minIdle}</prop>
 				<prop key="maxWait">${jdbc.maxWait}</prop>
+				<!-- 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒 -->
+				<prop key="timeBetweenEvictionRunsMillis">${jdbc.timeBetweenEvictionRunsMillis}</prop>
+				<!-- 配置一个连接在池中最小生存的时间，单位是毫秒 -->
+    			<prop key="minEvictableIdleTimeMillis">${jdbc.minEvictableIdleTimeMillis}</prop>
            		<prop key="validationQuery">${validationQuery}</prop>
 				<prop key="testOnBorrow">${jdbc.testOnBorrow}</prop>
 				<prop key="testOnReturn">${jdbc.testOnReturn}</prop>

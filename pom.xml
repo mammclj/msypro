@@ -250,6 +250,30 @@
 			<artifactId>junit</artifactId>
 			<version>4.11</version>
 		</dependency>
+		
+		<!-- phone 相关 -->
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>geocoder</artifactId>
+			<version>2.68</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>libphonenumber</artifactId>
+			<version>8.4.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>prefixmapper</artifactId>
+			<version>2.68</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode.libphonenumber</groupId>
+			<artifactId>carrier</artifactId>
+			<version>1.58</version>
+		</dependency>
 	</dependencies>
   <build>
     <finalName>msypro</finalName>
@@ -261,6 +285,8 @@
 			<version>2.0.2</version>
 			<configuration>
 				<warSourceExcludes>WEB-INF/lib/log4j-1.2.17.jar</warSourceExcludes>
+				<source>1.8.40</source>  
+				<target>1.8.40</target> 
 			</configuration>
 		</plugin>
 	</plugins>

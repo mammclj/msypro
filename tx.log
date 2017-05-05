@@ -1,0 +1,1321 @@
+2017-05-05 10:04:41  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:04:42  [ main:56 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7c0e2abd, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@48eff760, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@402f32ff, org.springframework.test.context.support.DirtiesContextTestExecutionListener@573f2bb1, org.springframework.test.context.transaction.TransactionalTestExecutionListener@5ae9a829, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6d8a00e3] 
+2017-05-05 10:04:42  [ main:454 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:04:43  [ main:1163 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:04:43  [ main:1271 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:04:43  [ main:1292 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:04:43  [ main:1314 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:04:43  [ main:1327 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:04:43  [ main:1382 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@f6c48ac: startup date [Fri May 05 10:04:43 CST 2017]; root of context hierarchy 
+2017-05-05 10:04:43  [ main:1707 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:04:43  [ main:1950 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:04:44  [ main:2048 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:04:44  [ main:2738 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:04:47  [ main:5238 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:04:47  [ main:5242 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:04:47  [ main:5487 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:04:47  [ main:5487 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:04:47  [ main:5489 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:04:47  [ main:5491 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:04:47  [ main:5492 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:04:47  [ main:5552 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:04:47  [ main:5574 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:04:47  [ main:5583 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:04:47  [ main:5583 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:04:47  [ main:5919 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:04:49  [ main:7139 ] - [ ERROR ]  Could not get a resource from the pool 
+redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:53)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at com.msymobile.www.commons.utils.redis.RedisClient.getRedis(RedisClient.java:79)
+	at com.msymobile.www.commons.utils.redis.RedisClient.isConnected(RedisClient.java:71)
+	at com.msymobile.www.commons.utils.redis.RedisClient.initRedisCOnfig(RedisClient.java:56)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:354)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:305)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:133)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	... 53 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 60 more
+2017-05-05 10:04:49  [ main:7149 ] - [ WARN ]  Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisClient': Invocation of init method failed; nested exception is java.lang.Error: IP:127.0.0.1,设置redis服务器出错 
+2017-05-05 10:04:49  [ main:7165 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:04:49  [ main:7169 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:04:49  [ main:7173 ] - [ ERROR ]  Caught exception while allowing TestExecutionListener [org.springframework.test.context.support.DependencyInjectionTestExecutionListener@402f32ff] to prepare test instance [msypro.TestSpring@6b3e12b5] 
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.injectDependencies(DependencyInjectionTestExecutionListener.java:117)
+	at org.springframework.test.context.support.DependencyInjectionTestExecutionListener.prepareTestInstance(DependencyInjectionTestExecutionListener.java:83)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:289)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:291)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:249)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:89)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:238)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:63)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:236)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:53)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:229)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:309)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:193)
+	at org.eclipse.jdt.internal.junit4.runner.JUnit4TestReference.run(JUnit4TestReference.java:86)
+	at org.eclipse.jdt.internal.junit.runner.TestExecution.run(TestExecution.java:38)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:459)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.runTests(RemoteTestRunner.java:678)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.run(RemoteTestRunner.java:382)
+	at org.eclipse.jdt.internal.junit.runner.RemoteTestRunner.main(RemoteTestRunner.java:192)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisClient': Invocation of init method failed; nested exception is java.lang.Error: IP:127.0.0.1,设置redis服务器出错
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:136)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyBeanPostProcessorsBeforeInitialization(AbstractAutowireCapableBeanFactory.java:408)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1570)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:545)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:482)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:772)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:839)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:538)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:125)
+	at org.springframework.test.context.support.AbstractGenericContextLoader.loadContext(AbstractGenericContextLoader.java:60)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:109)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:261)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 25 more
+Caused by: java.lang.Error: IP:127.0.0.1,设置redis服务器出错
+	at com.msymobile.www.commons.utils.redis.RedisClient.initRedisCOnfig(RedisClient.java:66)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:497)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleElement.invoke(InitDestroyAnnotationBeanPostProcessor.java:354)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor$LifecycleMetadata.invokeInitMethods(InitDestroyAnnotationBeanPostProcessor.java:305)
+	at org.springframework.beans.factory.annotation.InitDestroyAnnotationBeanPostProcessor.postProcessBeforeInitialization(InitDestroyAnnotationBeanPostProcessor.java:133)
+	... 42 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: Could not get a resource from the pool
+	at redis.clients.util.Pool.getResource(Pool.java:53)
+	at redis.clients.jedis.JedisPool.getResource(JedisPool.java:226)
+	at com.msymobile.www.commons.utils.redis.RedisClient.getRedis(RedisClient.java:79)
+	at com.msymobile.www.commons.utils.redis.RedisClient.isConnected(RedisClient.java:71)
+	at com.msymobile.www.commons.utils.redis.RedisClient.initRedisCOnfig(RedisClient.java:56)
+	... 49 more
+Caused by: redis.clients.jedis.exceptions.JedisConnectionException: java.net.ConnectException: Connection refused: connect
+	at redis.clients.jedis.Connection.connect(Connection.java:207)
+	at redis.clients.jedis.BinaryClient.connect(BinaryClient.java:93)
+	at redis.clients.jedis.BinaryJedis.connect(BinaryJedis.java:1767)
+	at redis.clients.jedis.JedisFactory.makeObject(JedisFactory.java:106)
+	at org.apache.commons.pool2.impl.GenericObjectPool.create(GenericObjectPool.java:868)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:435)
+	at org.apache.commons.pool2.impl.GenericObjectPool.borrowObject(GenericObjectPool.java:363)
+	at redis.clients.util.Pool.getResource(Pool.java:49)
+	... 53 more
+Caused by: java.net.ConnectException: Connection refused: connect
+	at java.net.DualStackPlainSocketImpl.waitForConnect(Native Method)
+	at java.net.DualStackPlainSocketImpl.socketConnect(DualStackPlainSocketImpl.java:85)
+	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:345)
+	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206)
+	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188)
+	at java.net.PlainSocketImpl.connect(PlainSocketImpl.java:172)
+	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392)
+	at java.net.Socket.connect(Socket.java:589)
+	at redis.clients.jedis.Connection.connect(Connection.java:184)
+	... 60 more
+2017-05-05 10:05:36  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:05:36  [ main:21 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@174d20a, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@66d2e7d9, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1efbd816, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a2bcfcb, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4de8b406, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@3c756e4d] 
+2017-05-05 10:05:36  [ main:114 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:05:36  [ main:318 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:05:36  [ main:342 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:05:36  [ main:358 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:05:36  [ main:374 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:05:36  [ main:387 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:05:36  [ main:438 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@e25b2fe: startup date [Fri May 05 10:05:36 CST 2017]; root of context hierarchy 
+2017-05-05 10:05:37  [ main:567 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:05:37  [ main:675 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:05:37  [ main:740 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:05:37  [ main:882 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:05:37  [ main:1498 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:05:37  [ main:1502 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:05:38  [ main:1661 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:05:38  [ main:1662 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:05:38  [ main:1664 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:05:38  [ main:1666 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:05:38  [ main:1667 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:05:38  [ main:1668 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:05:38  [ main:1708 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:05:38  [ main:1713 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:05:38  [ main:1723 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@36328d33 
+2017-05-05 10:05:38  [ main:1723 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@2c4d1ac 
+2017-05-05 10:05:38  [ main:1850 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:05:38  [ main:1944 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:05:38  [ main:2021 ] - [ INFO ]  8 
+2017-05-05 10:05:38  [ Thread-3:2023 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@e25b2fe: startup date [Fri May 05 10:05:36 CST 2017]; root of context hierarchy 
+2017-05-05 10:05:38  [ Thread-3:2029 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:05:38  [ Thread-3:2030 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:06:01  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:06:01  [ main:32 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:06:01  [ main:126 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:06:01  [ main:337 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:06:01  [ main:357 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:06:01  [ main:374 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:06:01  [ main:395 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:06:01  [ main:418 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:06:01  [ main:462 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:01 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:01  [ main:585 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:06:01  [ main:685 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:06:01  [ main:725 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:02  [ main:870 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:06:02  [ main:1525 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:02  [ main:1529 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:06:02  [ main:1735 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:06:02  [ main:1736 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:06:02  [ main:1739 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:06:02  [ main:1741 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:06:02  [ main:1741 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:06:02  [ main:1741 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:06:02  [ main:1741 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:06:03  [ main:1742 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:06:03  [ main:1743 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:06:03  [ main:1807 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:06:03  [ main:1813 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:06:03  [ main:1824 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:06:03  [ main:1824 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:06:03  [ main:1928 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:06:03  [ main:1985 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:06:03  [ main:2023 ] - [ INFO ]  8 
+2017-05-05 10:06:03  [ Thread-3:2026 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:01 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:03  [ Thread-3:2033 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:06:03  [ Thread-3:2034 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:06:28  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:06:28  [ main:30 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:06:28  [ main:120 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:06:28  [ main:319 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:06:28  [ main:334 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:06:28  [ main:360 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:06:28  [ main:374 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:06:28  [ main:388 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:06:28  [ main:431 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:28 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:28  [ main:573 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:06:28  [ main:666 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:06:28  [ main:712 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:29  [ main:856 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:06:29  [ main:1488 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:29  [ main:1491 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:06:29  [ main:1638 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:06:29  [ main:1638 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:06:29  [ main:1640 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:06:29  [ main:1642 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:06:29  [ main:1643 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:06:29  [ main:1644 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:06:29  [ main:1690 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:06:29  [ main:1696 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:06:29  [ main:1703 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:06:29  [ main:1704 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:06:29  [ main:1803 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:06:30  [ main:1862 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:06:30  [ main:1897 ] - [ INFO ]  8 
+2017-05-05 10:06:30  [ Thread-3:1900 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:28 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:30  [ Thread-3:1911 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:06:30  [ Thread-3:1912 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:06:40  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:06:40  [ main:31 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:06:40  [ main:122 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:06:41  [ main:328 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:06:41  [ main:350 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:06:41  [ main:376 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:06:41  [ main:391 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:06:41  [ main:404 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:06:41  [ main:455 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:41 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:41  [ main:589 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:06:41  [ main:678 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:06:41  [ main:722 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:41  [ main:868 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:06:42  [ main:1607 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:06:42  [ main:1611 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:06:42  [ main:1749 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:06:42  [ main:1750 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:06:42  [ main:1752 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:06:42  [ main:1754 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:06:42  [ main:1755 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:06:42  [ main:1756 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:06:42  [ main:1916 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:06:42  [ main:1930 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:06:42  [ main:1939 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:06:42  [ main:1939 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:06:42  [ main:2073 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:06:42  [ main:2134 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:06:42  [ main:2182 ] - [ INFO ]  -----------------================================abcd 
+2017-05-05 10:06:42  [ Thread-3:2185 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:06:41 CST 2017]; root of context hierarchy 
+2017-05-05 10:06:42  [ Thread-3:2191 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:06:42  [ Thread-3:2192 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:07:20  [ main:1 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:07:20  [ main:37 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:07:21  [ main:131 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:07:21  [ main:327 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:07:21  [ main:347 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:07:21  [ main:366 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:07:21  [ main:383 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:07:21  [ main:398 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:07:21  [ main:442 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:07:21 CST 2017]; root of context hierarchy 
+2017-05-05 10:07:21  [ main:579 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:07:21  [ main:676 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:07:21  [ main:719 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:07:21  [ main:887 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:07:22  [ main:1527 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:07:22  [ main:1530 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:07:22  [ main:1684 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:07:22  [ main:1685 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:07:22  [ main:1687 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:07:22  [ main:1688 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:07:22  [ main:1688 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:07:22  [ main:1688 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:07:22  [ main:1689 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:07:22  [ main:1690 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:07:22  [ main:1861 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:07:22  [ main:1866 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:07:22  [ main:1872 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:07:22  [ main:1872 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:07:22  [ main:2060 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:07:23  [ main:2116 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:07:23  [ Thread-3:2199 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:07:21 CST 2017]; root of context hierarchy 
+2017-05-05 10:07:23  [ Thread-3:2207 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:07:23  [ Thread-3:2208 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:07:44  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:07:44  [ main:49 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@36c88a32, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7880cdf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5be6e01c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c93084c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6ef888f6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10e92f8f] 
+2017-05-05 10:07:44  [ main:157 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:07:44  [ main:383 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:07:44  [ main:409 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:07:44  [ main:428 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:07:44  [ main:445 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:07:44  [ main:463 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:07:44  [ main:519 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@1a451d4d: startup date [Fri May 05 10:07:44 CST 2017]; root of context hierarchy 
+2017-05-05 10:07:45  [ main:700 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:07:45  [ main:803 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:07:45  [ main:850 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:07:45  [ main:1014 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:07:46  [ main:1742 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:07:46  [ main:1749 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:07:46  [ main:1917 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:07:46  [ main:1918 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:07:46  [ main:1920 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:07:46  [ main:1922 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:07:46  [ main:1923 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:07:46  [ main:1924 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:07:46  [ main:1924 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:07:46  [ main:1924 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:07:46  [ main:1924 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:07:46  [ main:1982 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:07:46  [ main:1988 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:07:46  [ main:2027 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 10:07:46  [ main:2027 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 10:07:46  [ main:2237 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:07:46  [ main:2284 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:08:16  [ Thread-3:32019 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@1a451d4d: startup date [Fri May 05 10:07:44 CST 2017]; root of context hierarchy 
+2017-05-05 10:08:16  [ Thread-3:32033 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:08:16  [ Thread-3:32033 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:08:31  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:08:31  [ main:59 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@36c88a32, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7880cdf3, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5be6e01c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1c93084c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6ef888f6, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@10e92f8f] 
+2017-05-05 10:08:31  [ main:195 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:08:31  [ main:423 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:08:31  [ main:448 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:08:31  [ main:468 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:08:31  [ main:486 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:08:31  [ main:499 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:08:31  [ main:550 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@1a451d4d: startup date [Fri May 05 10:08:31 CST 2017]; root of context hierarchy 
+2017-05-05 10:08:31  [ main:715 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:08:31  [ main:837 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:08:31  [ main:888 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:08:32  [ main:1082 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:08:32  [ main:1805 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:08:32  [ main:1810 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:08:33  [ main:2014 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:08:33  [ main:2015 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:08:33  [ main:2018 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:08:33  [ main:2020 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:08:33  [ main:2021 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:08:33  [ main:2022 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:08:33  [ main:2100 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:08:33  [ main:2108 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:08:33  [ main:2117 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@6ad11a56 
+2017-05-05 10:08:33  [ main:2117 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@522b2631 
+2017-05-05 10:08:40  [ main:9670 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:08:40  [ main:9706 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:08:55  [ Thread-3:24449 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@1a451d4d: startup date [Fri May 05 10:08:31 CST 2017]; root of context hierarchy 
+2017-05-05 10:08:55  [ Thread-3:24460 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:08:55  [ Thread-3:24460 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:09:24  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:09:24  [ main:30 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@460d0a57, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@47d90b9e, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@1184ab05, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3aefe5e5, org.springframework.test.context.transaction.TransactionalTestExecutionListener@149e0f5d, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@1b1473ab] 
+2017-05-05 10:09:24  [ main:168 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:09:24  [ main:393 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:09:24  [ main:415 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:09:24  [ main:434 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:09:24  [ main:457 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:09:24  [ main:475 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:09:24  [ main:525 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@7334aada: startup date [Fri May 05 10:09:24 CST 2017]; root of context hierarchy 
+2017-05-05 10:09:25  [ main:750 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:09:25  [ main:855 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:09:25  [ main:909 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:09:25  [ main:1074 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:09:26  [ main:1842 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:09:26  [ main:1854 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:09:26  [ main:2041 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:09:26  [ main:2043 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:09:26  [ main:2049 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:09:26  [ main:2052 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:09:26  [ main:2052 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:09:26  [ main:2052 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:09:26  [ main:2052 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:09:26  [ main:2053 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:09:26  [ main:2054 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:09:26  [ main:2055 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:09:26  [ main:2122 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:09:26  [ main:2128 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:09:26  [ main:2135 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@60723d6a 
+2017-05-05 10:09:26  [ main:2135 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@18324f97 
+2017-05-05 10:09:26  [ main:2260 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:09:26  [ main:2303 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:09:39  [ main:15310 ] - [ INFO ]  8 
+2017-05-05 10:09:39  [ Thread-3:15316 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@7334aada: startup date [Fri May 05 10:09:24 CST 2017]; root of context hierarchy 
+2017-05-05 10:09:39  [ Thread-3:15326 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:09:39  [ Thread-3:15326 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:10:23  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:10:23  [ main:41 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 10:10:24  [ main:168 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:10:24  [ main:423 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:10:24  [ main:447 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:10:24  [ main:470 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:10:24  [ main:488 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:10:24  [ main:501 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:10:24  [ main:543 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 10:10:24 CST 2017]; root of context hierarchy 
+2017-05-05 10:10:24  [ main:721 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:10:24  [ main:841 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:10:24  [ main:892 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:10:24  [ main:1068 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:10:25  [ main:1783 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:10:25  [ main:1788 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:10:25  [ main:1973 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:10:25  [ main:1974 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:10:25  [ main:1976 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:10:25  [ main:1978 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:10:25  [ main:1978 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:10:25  [ main:1979 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:10:25  [ main:1980 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:10:25  [ main:1981 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:10:25  [ main:1981 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:10:25  [ main:2040 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:10:25  [ main:2047 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:10:25  [ main:2053 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 10:10:25  [ main:2053 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 10:10:26  [ main:2274 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:10:26  [ main:2330 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:10:26  [ Thread-3:2496 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 10:10:24 CST 2017]; root of context hierarchy 
+2017-05-05 10:10:26  [ Thread-3:2505 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:10:26  [ Thread-3:2506 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:14:56  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:14:56  [ main:30 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 10:14:56  [ main:147 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:14:57  [ main:388 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:14:57  [ main:413 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:14:57  [ main:436 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:14:57  [ main:454 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:14:57  [ main:471 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:14:57  [ main:528 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 10:14:57 CST 2017]; root of context hierarchy 
+2017-05-05 10:14:57  [ main:703 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:14:57  [ main:817 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:14:57  [ main:859 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:14:57  [ main:1010 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:14:58  [ main:1717 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:14:58  [ main:1730 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:14:58  [ main:1898 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:14:58  [ main:1898 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:14:58  [ main:1900 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:14:58  [ main:1902 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:14:58  [ main:1902 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:14:58  [ main:1903 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:14:58  [ main:1904 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:14:58  [ main:1949 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:14:58  [ main:1955 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:14:58  [ main:1965 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 10:14:58  [ main:1966 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 10:14:58  [ main:2140 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:14:58  [ main:2188 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:14:58  [ Thread-3:2275 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 10:14:57 CST 2017]; root of context hierarchy 
+2017-05-05 10:14:58  [ Thread-3:2284 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:14:58  [ Thread-3:2285 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:15:15  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:15:15  [ main:26 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:15:15  [ main:114 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:15:15  [ main:318 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:15:15  [ main:340 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:15:15  [ main:356 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:15:15  [ main:372 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:15:15  [ main:387 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:15:16  [ main:452 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:15:16 CST 2017]; root of context hierarchy 
+2017-05-05 10:15:16  [ main:581 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:15:16  [ main:676 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:15:16  [ main:719 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:15:16  [ main:846 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:15:17  [ main:1472 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:15:17  [ main:1475 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:15:17  [ main:1620 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:15:17  [ main:1621 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:15:17  [ main:1623 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:15:17  [ main:1625 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:15:17  [ main:1626 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:15:17  [ main:1627 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:15:17  [ main:1680 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:15:17  [ main:1685 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:15:17  [ main:1691 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:15:17  [ main:1691 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:15:17  [ main:1841 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:15:17  [ main:1894 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:15:17  [ Thread-3:1952 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:15:16 CST 2017]; root of context hierarchy 
+2017-05-05 10:15:17  [ Thread-3:1963 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:15:17  [ Thread-3:1964 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:15:45  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:15:45  [ main:109 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:15:46  [ main:234 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:15:46  [ main:482 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:15:46  [ main:517 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:15:46  [ main:532 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:15:46  [ main:549 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:15:46  [ main:562 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:15:46  [ main:613 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:15:46 CST 2017]; root of context hierarchy 
+2017-05-05 10:15:46  [ main:744 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:15:46  [ main:841 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:15:46  [ main:891 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:15:46  [ main:1024 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:15:47  [ main:1641 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:15:47  [ main:1644 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:15:47  [ main:1798 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:15:47  [ main:1799 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:15:47  [ main:1801 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:15:47  [ main:1802 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:15:47  [ main:1803 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:15:47  [ main:1804 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:15:47  [ main:1908 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:15:47  [ main:1922 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:15:47  [ main:1952 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:15:47  [ main:1953 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:15:47  [ main:2117 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:15:48  [ main:2162 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:15:48  [ Thread-3:2235 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:15:46 CST 2017]; root of context hierarchy 
+2017-05-05 10:15:48  [ Thread-3:2241 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:15:48  [ Thread-3:2242 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 10:16:05  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 10:16:05  [ main:25 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 10:16:05  [ main:122 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 10:16:06  [ main:325 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 10:16:06  [ main:348 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 10:16:06  [ main:365 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 10:16:06  [ main:381 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 10:16:06  [ main:394 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 10:16:06  [ main:442 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:16:06 CST 2017]; root of context hierarchy 
+2017-05-05 10:16:06  [ main:579 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 10:16:06  [ main:672 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 10:16:06  [ main:707 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:16:06  [ main:837 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 10:16:07  [ main:1471 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 10:16:07  [ main:1481 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 10:16:07  [ main:1630 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 10:16:07  [ main:1631 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 10:16:07  [ main:1632 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 10:16:07  [ main:1634 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 10:16:07  [ main:1635 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 10:16:07  [ main:1636 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 10:16:07  [ main:1683 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 10:16:07  [ main:1688 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 10:16:07  [ main:1697 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 10:16:07  [ main:1697 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 10:16:07  [ main:1835 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 10:16:07  [ main:1885 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 10:16:07  [ main:1937 ] - [ INFO ]  8 
+2017-05-05 10:16:07  [ Thread-3:1939 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 10:16:06 CST 2017]; root of context hierarchy 
+2017-05-05 10:16:07  [ Thread-3:1946 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 10:16:07  [ Thread-3:1947 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 11:11:37  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 11:11:37  [ main:35 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@6d8a00e3, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@548b7f67, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7ac7a4e4, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6d78f375, org.springframework.test.context.transaction.TransactionalTestExecutionListener@50c87b21, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@5f375618] 
+2017-05-05 11:11:37  [ main:140 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 11:11:37  [ main:344 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 11:11:37  [ main:369 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 11:11:37  [ main:388 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 11:11:37  [ main:405 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 11:11:37  [ main:418 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 11:11:37  [ main:469 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 11:11:37 CST 2017]; root of context hierarchy 
+2017-05-05 11:11:37  [ main:609 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 11:11:37  [ main:722 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 11:11:37  [ main:762 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 11:11:37  [ main:915 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 11:11:38  [ main:1565 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 11:11:38  [ main:1569 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 11:11:38  [ main:1729 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 11:11:38  [ main:1729 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 11:11:38  [ main:1731 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 11:11:38  [ main:1733 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 11:11:38  [ main:1733 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 11:11:38  [ main:1733 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 11:11:38  [ main:1733 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 11:11:38  [ main:1734 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 11:11:38  [ main:1735 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 11:11:38  [ main:1736 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 11:11:38  [ main:1784 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 11:11:38  [ main:1789 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 11:11:38  [ main:1796 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@41e68d87 
+2017-05-05 11:11:38  [ main:1796 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@49ff7d8c 
+2017-05-05 11:11:38  [ main:1910 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 11:11:39  [ main:1950 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 11:11:39  [ main:1993 ] - [ INFO ]  8 
+2017-05-05 11:11:39  [ Thread-3:1996 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@31ef45e3: startup date [Fri May 05 11:11:37 CST 2017]; root of context hierarchy 
+2017-05-05 11:11:39  [ Thread-3:2003 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 11:11:39  [ Thread-3:2004 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:10:11  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:10:11  [ main:100 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:10:12  [ main:411 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:10:13  [ main:1585 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:10:13  [ main:1652 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:10:13  [ main:1682 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:10:13  [ main:1802 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:10:13  [ main:1835 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:10:13  [ main:1938 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:10:13 CST 2017]; root of context hierarchy 
+2017-05-05 16:10:13  [ main:2188 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:10:14  [ main:2456 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:10:14  [ main:2532 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:10:14  [ main:3321 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:10:17  [ main:5882 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:10:17  [ main:5891 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:10:17  [ main:6234 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:10:17  [ main:6236 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:10:17  [ main:6239 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:10:17  [ main:6240 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:10:17  [ main:6241 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:10:17  [ main:6242 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:10:17  [ main:6368 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:10:18  [ main:6402 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:10:18  [ main:6408 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@4525d1d3 
+2017-05-05 16:10:18  [ main:6408 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@7c974942 
+2017-05-05 16:10:18  [ main:6649 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:10:18  [ main:6907 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:10:28  [ Thread-3:17301 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:10:13 CST 2017]; root of context hierarchy 
+2017-05-05 16:10:28  [ Thread-3:17353 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:10:28  [ Thread-3:17354 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:11:01  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:11:01  [ main:34 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@7ce3cb8e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@78b66d36, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@5223e5ee, org.springframework.test.context.support.DirtiesContextTestExecutionListener@bef2d72, org.springframework.test.context.transaction.TransactionalTestExecutionListener@69b2283a, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@22a637e7] 
+2017-05-05 16:11:02  [ main:177 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:11:02  [ main:449 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:11:02  [ main:478 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:11:02  [ main:499 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:11:02  [ main:518 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:11:02  [ main:533 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:11:02  [ main:591 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@32eff876: startup date [Fri May 05 16:11:02 CST 2017]; root of context hierarchy 
+2017-05-05 16:11:02  [ main:791 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:11:02  [ main:935 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:11:02  [ main:987 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:11:03  [ main:1224 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:11:04  [ main:2126 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:11:04  [ main:2134 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:11:04  [ main:2349 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:11:04  [ main:2349 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:11:04  [ main:2351 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:11:04  [ main:2353 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:11:04  [ main:2354 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:11:04  [ main:2355 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:11:04  [ main:2355 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:11:04  [ main:2411 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:11:04  [ main:2419 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:11:04  [ main:2430 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 16:11:04  [ main:2431 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 16:11:04  [ main:2565 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:11:04  [ main:2611 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:11:54  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:11:54  [ main:33 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:11:54  [ main:196 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:11:55  [ main:473 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:11:55  [ main:497 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:11:55  [ main:515 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:11:55  [ main:532 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:11:55  [ main:548 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:11:55  [ main:605 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:11:55 CST 2017]; root of context hierarchy 
+2017-05-05 16:11:55  [ main:805 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:11:55  [ main:935 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:11:55  [ main:980 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:11:55  [ main:1179 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:11:56  [ main:2000 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:11:56  [ main:2007 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:11:56  [ main:2205 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:11:56  [ main:2205 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:11:56  [ main:2207 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:11:56  [ main:2209 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:11:56  [ main:2210 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:11:56  [ main:2211 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:11:56  [ main:2262 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:11:57  [ main:2272 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:11:57  [ main:2284 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 16:11:57  [ main:2284 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 16:11:57  [ main:2437 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:11:57  [ main:2476 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:12:19  [ main:25027 ] - [ INFO ]  查询mysql中的数据，并保存到redis中... 
+2017-05-05 16:12:21  [ main:26298 ] - [ INFO ]  {"message":"","obj":[],"success":true} 
+2017-05-05 16:12:21  [ Thread-3:26305 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:11:55 CST 2017]; root of context hierarchy 
+2017-05-05 16:12:21  [ Thread-3:26311 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:12:21  [ Thread-3:26312 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:12:53  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:12:53  [ main:45 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:12:53  [ main:177 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:12:53  [ main:417 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:12:53  [ main:446 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:12:53  [ main:470 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:12:53  [ main:488 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:12:53  [ main:504 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:12:53  [ main:584 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:12:53 CST 2017]; root of context hierarchy 
+2017-05-05 16:12:53  [ main:769 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:12:53  [ main:909 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:12:54  [ main:967 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:12:54  [ main:1153 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:12:55  [ main:1969 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:12:55  [ main:1974 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:12:55  [ main:2190 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:12:55  [ main:2191 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:12:55  [ main:2194 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:12:55  [ main:2195 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:12:55  [ main:2196 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:12:55  [ main:2197 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:12:55  [ main:2245 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:12:55  [ main:2255 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:12:55  [ main:2262 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@3ff57625 
+2017-05-05 16:12:55  [ main:2262 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@1ee29c84 
+2017-05-05 16:12:55  [ main:2518 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:12:55  [ main:2564 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:12:55  [ main:2652 ] - [ INFO ]  查询mysql中的数据，并保存到redis中... 
+2017-05-05 16:12:55  [ main:2829 ] - [ INFO ]  {"message":"","obj":[],"success":true} 
+2017-05-05 16:12:55  [ Thread-3:2832 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:12:53 CST 2017]; root of context hierarchy 
+2017-05-05 16:12:55  [ Thread-3:2842 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:12:55  [ Thread-3:2843 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:12:59  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:12:59  [ main:32 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:12:59  [ main:158 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:13:00  [ main:406 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:13:00  [ main:435 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:13:00  [ main:456 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:13:00  [ main:477 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:13:00  [ main:492 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:13:00  [ main:558 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:00 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:00  [ main:753 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:13:00  [ main:882 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:13:00  [ main:933 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:00  [ main:1115 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:13:01  [ main:1932 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:01  [ main:1935 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:13:01  [ main:2168 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:13:01  [ main:2168 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:13:01  [ main:2170 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:13:01  [ main:2172 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:13:01  [ main:2173 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:13:01  [ main:2174 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:13:02  [ main:2235 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:13:02  [ main:2241 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:13:02  [ main:2246 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 16:13:02  [ main:2246 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 16:13:02  [ main:2416 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:13:02  [ main:2452 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:13:02  [ main:2540 ] - [ INFO ]  查询缓存数据...13 
+2017-05-05 16:13:02  [ main:2630 ] - [ INFO ]  {"message":"","obj":[],"success":true} 
+2017-05-05 16:13:02  [ Thread-3:2635 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:00 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:02  [ Thread-3:2643 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:13:02  [ Thread-3:2643 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:13:07  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:13:07  [ main:28 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:13:07  [ main:148 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:13:07  [ main:407 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:13:07  [ main:430 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:13:07  [ main:449 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:13:07  [ main:466 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:13:07  [ main:481 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:13:07  [ main:533 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:07 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:07  [ main:727 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:13:07  [ main:860 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:13:07  [ main:904 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:08  [ main:1071 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:13:08  [ main:1846 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:08  [ main:1851 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:13:09  [ main:2045 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:13:09  [ main:2046 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:13:09  [ main:2048 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:13:09  [ main:2049 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:13:09  [ main:2050 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:13:09  [ main:2051 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:13:09  [ main:2096 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:13:09  [ main:2111 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:13:09  [ main:2124 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 16:13:09  [ main:2124 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 16:13:09  [ main:2265 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:13:09  [ main:2306 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:13:09  [ main:2400 ] - [ INFO ]  查询缓存数据...6 
+2017-05-05 16:13:09  [ main:2519 ] - [ INFO ]  {"message":"","obj":[],"success":true} 
+2017-05-05 16:13:09  [ Thread-3:2524 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:07 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:09  [ Thread-3:2531 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:13:09  [ Thread-3:2532 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 
+2017-05-05 16:13:09  [ Thread-3:2533 ] - [ WARN ]  atomikos connection pool 'masterDB': connection is still in use on pool destroy: an AtomikosXAPooledConnection with a SessionHandleState with 1 context(s) - please check your shutdown sequence to avoid heuristic termination of ongoing transactions! 
+2017-05-05 16:13:15  [ main:0 ] - [ INFO ]  Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener] 
+2017-05-05 16:13:15  [ main:40 ] - [ INFO ]  Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@ef9296d, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@36c88a32, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@7880cdf3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@5be6e01c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@1c93084c, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6ef888f6] 
+2017-05-05 16:13:15  [ main:166 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring.xml] 
+2017-05-05 16:13:16  [ main:410 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-datasources.xml] 
+2017-05-05 16:13:16  [ main:436 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis.xml] 
+2017-05-05 16:13:16  [ main:457 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-master.xml] 
+2017-05-05 16:13:16  [ main:485 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-mybatis-mapper-slave.xml] 
+2017-05-05 16:13:16  [ main:503 ] - [ INFO ]  Loading XML bean definitions from class path resource [spring-transaction.xml] 
+2017-05-05 16:13:16  [ main:571 ] - [ INFO ]  Refreshing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:16 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:16  [ main:759 ] - [ INFO ]  Loading properties file from class path resource [jdbc.properties] 
+2017-05-05 16:13:16  [ main:902 ] - [ DEBUG ]  Logging initialized using 'class org.apache.ibatis.logging.slf4j.Slf4jImpl' adapter. 
+2017-05-05 16:13:16  [ main:957 ] - [ WARN ]  AtomikosDataSoureBean 'masterDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:16  [ main:1125 ] - [ INFO ]  {dataSource-1} inited 
+2017-05-05 16:13:17  [ main:1918 ] - [ WARN ]  AtomikosDataSoureBean 'slaveDB': testQuery set - pool may be slower / you might want to consider setting maxLifetime instead... 
+2017-05-05 16:13:17  [ main:1927 ] - [ INFO ]  {dataSource-2} inited 
+2017-05-05 16:13:17  [ main:2118 ] - [ INFO ]  Loaded jar:file:/D:/mamm/java/maven/repository-3.3.9/com/atomikos/transactions/4.0.2/transactions-4.0.2.jar!/transactions-defaults.properties 
+2017-05-05 16:13:17  [ main:2118 ] - [ INFO ]  Loaded file:/D:/mamm/java/workspace/msypro/target/classes/jta.properties 
+2017-05-05 16:13:17  [ main:2120 ] - [ WARN ]  Thanks for using Atomikos! Register at http://www.atomikos.com/Main/RegisterYourDownload to disable this message and receive FREE tips & advice. 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.console_file_name = /home/logs/tx/tx.out.log 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.allow_subtransactions = true 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.recovery_delay = 10000 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.automatic_resource_registration = true 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_max_retries = 5 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.client_demarcation = false 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.threaded_2pc = false 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.serial_jta_transactions = true 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_dir = ./ 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.rmi_export_class = none 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.console_log_level = DEBUG 
+2017-05-05 16:13:17  [ main:2122 ] - [ INFO ]  USING: com.atomikos.icatch.max_actives = 50 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.checkpoint_interval = 500 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.enable_logging = true 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.log_base_name = txlog 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.max_timeout = 300000 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.trust_client_tm = false 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: java.naming.factory.initial = com.sun.jndi.rmi.registry.RegistryContextFactory 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.tm_unique_name = com.atomikos.spring.jdbc.tm 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.forget_orphaned_log_entries_delay = 86400000 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.oltp_retry_interval = 10000 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: java.naming.provider.url = rmi://localhost:1099 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.service = com.atomikos.icatch.standalone.UserTransactionServiceFactory 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.force_shutdown_on_vm_exit = false 
+2017-05-05 16:13:17  [ main:2123 ] - [ INFO ]  USING: com.atomikos.icatch.default_jta_timeout = 10000 
+2017-05-05 16:13:17  [ main:2169 ] - [ INFO ]  masterDB: refreshed XAResource 
+2017-05-05 16:13:18  [ main:2178 ] - [ INFO ]  slaveDB: refreshed XAResource 
+2017-05-05 16:13:18  [ main:2184 ] - [ INFO ]  Using JTA UserTransaction: com.atomikos.icatch.jta.UserTransactionImp@5f84abe8 
+2017-05-05 16:13:18  [ main:2184 ] - [ INFO ]  Using JTA TransactionManager: com.atomikos.icatch.jta.UserTransactionManager@4650a407 
+2017-05-05 16:13:18  [ main:2353 ] - [ INFO ]  ------------- redis pool init start-------------  
+2017-05-05 16:13:18  [ main:2450 ] - [ INFO ]  ------------- redis pool init end-------------  
+2017-05-05 16:13:18  [ main:2571 ] - [ INFO ]  查询mysql中的数据，并保存到redis中... 
+2017-05-05 16:13:18  [ main:2767 ] - [ INFO ]  {"message":"","obj":[],"success":true} 
+2017-05-05 16:13:18  [ Thread-3:2771 ] - [ INFO ]  Closing org.springframework.context.support.GenericApplicationContext@62150f9e: startup date [Fri May 05 16:13:16 CST 2017]; root of context hierarchy 
+2017-05-05 16:13:18  [ Thread-3:2784 ] - [ INFO ]  atomikos connection pool 'slaveDB': destroying pool... 
+2017-05-05 16:13:18  [ Thread-3:2785 ] - [ INFO ]  atomikos connection pool 'masterDB': destroying pool... 

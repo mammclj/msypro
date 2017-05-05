@@ -18,6 +18,7 @@
 // 				{text: 'Test readAreaXmlFile',attributes:{url:'${path}/areaController/readAreaXmlFile'}},
 // 				{text: 'Test saveUser',attributes:{url:'${path}/userController/963/saveUser'}},
 // 				{text: 'Test getAll',attributes:{url:'${path}/userController/getAll'}},
+				{text: 'Test showAreaRedis',attributes:{url:'${path}/taoBaoAreaController/showAreaRedis?country=中国'}},
 				{text: 'Test showAreaInfoByIp',attributes:{url:'${path}/taoBaoAreaController/showAreaInfoByIp'}}
 			],
 			onClick: function(node){

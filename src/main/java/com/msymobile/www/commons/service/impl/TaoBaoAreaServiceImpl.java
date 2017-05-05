@@ -1,5 +1,11 @@
 package com.msymobile.www.commons.service.impl;
 
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectOutputStream;
+import java.util.ArrayList;
+import java.util.List;
+
 import org.apache.log4j.Logger;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +27,7 @@ import com.msymobile.www.commons.model.master.SP;
 import com.msymobile.www.commons.model.master.TaoBaoArea;
 import com.msymobile.www.commons.model.slave.TaoBaoAreaInfo;
 import com.msymobile.www.commons.service.TaoBaoAreaService;
+import com.msymobile.www.commons.utils.RedisUtil;
 @Service("taoBaoAreaService")
 public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 
@@ -96,6 +103,72 @@ public class TaoBaoAreaServiceImpl implements TaoBaoAreaService {
 			result = this.iPMapper.insert(ipModel);
 		}
 		return result;
+	}
+
+	@Override
+	public List<TaoBaoArea> showAreaRedis(String country) {
+		List<TaoBaoArea> list = new ArrayList<TaoBaoArea>();
+		String rs = RedisUtil.getJedis().get(country);
+		if(rs ==null){
+			logger.info("查询mysql中的数据，并保存到redis中...");
+			selectTest(list, country);
+		}else{
+			logger.info("查询缓存数据..."+RedisUtil.getJedis().ttl(country));
+			if(RedisUtil.getJedis().ttl(country)<10){
+				new Thread() {  
+                    @Override  
+                    public void run() {  
+                        //保证5秒内，一条数据只更新一次  
+                        Long incr = RedisUtil.getJedis().incr("incr-flag-"+country);  
+                        RedisUtil.getJedis().expire("incr-flag-"+country, 5);  
+                          
+                        if(1 == incr){  
+                        	selectTest(list, country);
+                        	logger.info("异步更新数据："+country);  
+                        }  
+                    }  
+                }.start(); 
+			}
+//			logger.info(country+":-----"+RedisUtil.getJedis().get(country));
+		}
+		return list;
+	}
+	
+	public void selectTest(List<TaoBaoArea> list,String country){
+		list = this.taoBaoAreaMapper.selectTaoBaoAreaByCountry(country);
+		byte[] results = null;
+		ByteArrayOutputStream bos = null;
+		ObjectOutputStream os = null;
+		
+		try {
+			bos = new ByteArrayOutputStream();
+			os = new ObjectOutputStream(bos);
+			for (TaoBaoArea taoBaoArea : list) {
+				os.writeObject(taoBaoArea);
+			}
+			
+			os.close();
+			bos.close();
+			results = bos.toByteArray();
+		} catch (IOException e) {
+			throw new IllegalArgumentException("Non-serializable object", e);
+		} finally {
+			if(os!=null){
+				try {
+					os.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+			if(bos!=null){
+				try {
+					bos.close();
+				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		}
+		RedisUtil.getJedis().setex(country.getBytes(), 20,results);
 	}
 
 }

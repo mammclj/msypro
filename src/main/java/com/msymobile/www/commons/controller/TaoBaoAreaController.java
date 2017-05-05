@@ -2,6 +2,7 @@ package com.msymobile.www.commons.controller;
 
 import java.io.PrintWriter;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.UUID;
 
@@ -97,6 +98,13 @@ public class TaoBaoAreaController {
 				out.close();
 			}
 		}
+		return null;
+	}
+	
+	@RequestMapping("/showAreaRedis")
+	public String showAreaRedis(HttpServletRequest request,HttpServletResponse response){
+		String country = request.getParameter("country");
+		List<TaoBaoArea> list = this.taoBaoAreaService.showAreaRedis(country);
 		return null;
 	}
 }

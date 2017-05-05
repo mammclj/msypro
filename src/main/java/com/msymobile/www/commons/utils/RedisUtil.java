@@ -32,7 +32,7 @@ public class RedisUtil {
 	 * 初始化线程池
 	 */
 	static {
-		InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("/redis.properties");
+		InputStream in = RedisUtil.class.getClassLoader().getResourceAsStream("redis.properties");
 		Properties pro = new Properties();
 		try {
 			pro.load(in);

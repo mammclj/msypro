@@ -1,7 +1,11 @@
 package com.msymobile.www.commons.model.master;
 
-public class TaoBaoArea {
-    private String id;
+import java.io.Serializable;
+
+public class TaoBaoArea implements Serializable{
+	private static final long serialVersionUID = -8960017084715471938L;
+
+	private String id;
 
     private String country;
 

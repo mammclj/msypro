@@ -26,6 +26,12 @@
     from tao_bao_area
     where id = #{id,jdbcType=VARCHAR}
   </select>
+  <select id="selectTaoBaoAreaByCountry" resultMap="BaseResultMap" parameterType="java.lang.String" >
+    select 
+    <include refid="Base_Column_List" />
+    from tao_bao_area
+    where country = #{country,jdbcType=VARCHAR}
+  </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
     delete from tao_bao_area
     where id = #{id,jdbcType=VARCHAR}
